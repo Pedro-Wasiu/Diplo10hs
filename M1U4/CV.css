@@ -1,0 +1,36 @@
+p {
+    font-size: small;
+   }
+#Nombre {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    background-color:rgba(253, 1, 1, 0.288);
+    width: 310px;
+    margin: auto;
+    border-radius: 5px;
+}
+
+#Contenido {
+    color: rgb(0, 0, 0);
+    margin-left: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h3{
+    color: red;
+}
+
+body {
+    background-color: rgba(190, 190, 190, 0.377);
+
+}
+
+img{
+    margin-left: 1080px;
+}
+    
+    
+    
+    
+    
+ 

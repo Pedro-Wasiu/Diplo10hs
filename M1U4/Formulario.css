@@ -1,11 +1,32 @@
-#C{
-    text-align: center;
-}
 
+#C{
+  border-bottom: 5px solid #000000;
+  margin: auto;
+    text-align: center;
+    width: 150px;
+}
+#Formulario{
+  text-align: center;
+  margin-right: 1000px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  border: 1px solid #000000;
+  border-radius: 45px 45px 45px 45px;
+-webkit-border-radius: 45px 45px 45px 45px;
+-moz-border-radius: 45px 45px 45px 45px;
+  }
+  
 #password {
 margin-left: 56px;
 }
 
 label {
-  font-family:Verdana, Geneva, Tahoma, sans-serif
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.option{
+  cursor: pointer;
 }

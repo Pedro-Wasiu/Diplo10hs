@@ -2,18 +2,38 @@ p {
     font-size: small;
    }
 #Nombre {
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
-    background-color:rgba(253, 1, 1, 0.288);
+    background: rgb(63,94,251);
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(255,0,52,0.6502976190476191) 100%);
     width: 310px;
     margin: auto;
     border-radius: 5px;
 }
 
 #Contenido {
+    background-color: rgb(238, 238, 238);
+    padding-left: 10px;
+    padding-right: 40px;
+    padding-bottom: 5px;
+    padding-top: 1px;
+    margin-right: 1000px;
+    border: 3px double #000000;
     color: rgb(0, 0, 0);
     margin-left: 10px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    .fira-sans-thin {
+        font-family: "Fira Sans", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+      }
+      
+    box-shadow: 22px 14px 49px 12px rgba(0,0,0,0.66);
+-webkit-box-shadow: 22px 14px 49px 12px rgba(0,0,0,0.66);
+-moz-box-shadow: 22px 14px 49px 12px rgba(0,0,0,0.66);
 }
 
 h3{
@@ -21,12 +41,15 @@ h3{
 }
 
 body {
-    background-color: rgba(190, 190, 190, 0.377);
+    background-color: rgba(255, 94, 0, 0.767);
 
 }
 
 img{
     margin-left: 1080px;
+    box-shadow: 22px 14px 49px 12px rgba(0,0,0,0.66);
+    -webkit-box-shadow: 22px 14px 49px 12px rgba(0,0,0,0.66);
+    -moz-box-shadow: 22px 14px 49px 12px rgba(0,0,0,0.66);
 }
     
     

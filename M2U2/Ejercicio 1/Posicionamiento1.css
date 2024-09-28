@@ -1,0 +1,48 @@
+
+body{
+    background-color: rgb(255, 255, 255);
+    
+}
+
+#contenedor-principal{
+    display: flex; 
+    /* Los elementos hijos permanecen dentro de la caja padre, sin esto no se alinean adecuadamente */
+    align-items: flex-end;
+    /* Alineo los elementos al final del contenedor */
+    border: 3px solid #000000;
+    margin-top: 10px;
+    margin-right: 350px;    
+    margin-left: 350px;
+    margin-bottom: 30px;
+    height: 600px;
+    
+    flex-direction:column;
+    
+}
+
+
+[id*="item"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 33%;
+    height: 100%;
+    text-align: center;
+}
+
+#item1{
+    background-color: rgb(255, 0, 0);
+}
+
+#item2{
+    background-color: blue;
+}
+
+#item3{
+    background-color: green;
+}
+
+p{
+    color: white;
+}
+

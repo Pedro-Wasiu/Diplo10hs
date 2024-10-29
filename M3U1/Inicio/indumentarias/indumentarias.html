@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../normalize/normalize.css">
+
+    <link rel="stylesheet" href="indumentaria.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../M1U4/Formulario.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <img id="bosque" src="../Imagenes/fondoleñador8.png" alt="bosque">
+
+    <div class="principio">
+        <header>
+
+
+            <img id="logo" src="../Imagenes/Logo.png" alt="Logo">
+            <h1>Wasiu Clothing</h1>
+
+
+        </header>
+
+        <!-- Botonera (lista) -->
+        <nav>
+            <ul>
+                <li><a href="../inicio/index.html">Inicio</a></li>
+                <div>
+            
+                <nav>
+                    <ul>
+                       
+                        <li>
+                            <a href="#">Indumentarias &#9662;</a> <!-- Flecha hacia abajo -->
+                            <ul class="submenu">
+                                <li><a href="#">Camisetas</a></li>
+                                <li><a href="#">Pantalones</a></li>
+                                <li><a href="#">Accesorios</a></li>
+                            </ul>
+                        </li>
+                       
+                    </ul>
+                </nav>
+                
+                </div>
+                <li><a href="../historia/historia.html">Historia</a></li>
+                <li><a href="../equipo/equipo.html">Equipo</a></li>
+                <li><a href="../soporte/soporte.html">Soporte</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+
+
+        <h1 id="C">Contactar</h1>
+
+        <div id="Formulario">
+            <div class="alinear">
+                <p>
+                    <label for="nom">Nombre y Apellido</label>
+                    <!-- Label es la etiqueta previa a la casilla a rellenar -->
+
+                </p>
+                <p>
+                    <input type="text" name="nombre" placeholder="Nombre" id="Nombres" />
+                </p>
+
+
+                <p>
+                    <input type="text" name="apellido" placeholder="Apellido" id="Nombres" />
+                    <!-- Con placeholder="apellido" Veo el apellido dentro de la casilla -->
+                </p>
+
+
+                <p>
+                    <label for="pass">Contraseña</label>
+                </p>
+                <p>
+                    <input type="password" name="pass" />
+                </p>
+            </div>
+            <div class="alinear">
+                <label for="sexo">Sexo</label>
+
+                <ul>
+                    <li>
+                        <input type="radio" name="sexo" value="hombre" />
+                        <label for="Hombre">Hombre</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="sexo" value="mujer">
+                        <label for="Mujer">Mujer</label>
+                    </li>
+                </ul>
+            </div>
+            <label for="Hobbies">Hobbies</label>
+
+            <ul>
+
+                <li>
+                    <input type="checkbox" name="Hobbies[]" value="bailar" id="bailar" />
+                    <label for="bailar">Bailar</label>
+                </li>
+
+                <li>
+                    <input type="checkbox" name="hobbies[]" value="cantar" id="cantar">
+                    <label for="cantar">Cantar</label>
+                </li>
+
+                <li>
+                    <input type="checkbox" name="hobbies[]" value="nadar" id="nadar">
+                    <label for="nadar">Nadar</label>
+                </li>
+
+                <li>
+                    <input type="checkbox" name="hobbies[]" value="correr" id="correr">
+                    <label for="correr">Correr</label>
+                </li>
+            </ul>
+
+            <p>
+                <label for="titulo">Titulo</label>
+                <select name="titulo" id="titulo">
+                    <option value="primario">Primario</option>
+                    <option value="secundario">Secundario</option>
+                    <option value="terciario">Terciario</option>
+                    <option value="universitario">Universitario</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="comentarios">Comentarios</label>
+                <textarea name="comentarios" id="comentarios"></textarea>
+            </p>
+
+            <p>
+                <input type="submit" value="Enviar" class="option">
+                <input type="reset" value="Borrar" class="option">
+            </p>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <p>Diseñado por Pedro Wasiuniec</p>
+    </footer>
+
+</body>
+
+</html>

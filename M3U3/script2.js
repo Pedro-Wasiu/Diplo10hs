@@ -5,23 +5,27 @@ function boton() {
   const num3 = parseInt(document.getElementById("numero3").value);
 
   // Validación: verificar si algún valor ingresado no es un número
-  if (isNaN(num1) || isNaN(num2) || isNaN(num3)) 
-    // verifica si el valor pasado como argumento no es un número.
-    {
-    document.getElementById("respuesta").innerText = "Por favor, ingrese tres números válidos.";
-    return;
+  if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+      document.getElementById("respuesta").innerText = "Por favor, ingrese tres números válidos.";
+      return;
   }
 
-  // Comparar los números y encontrar el mayor
-  let mayor;
-  if (num1 > num2 && num1 > num3) {
-    mayor = num1;
-  } else if (num2 > num3) {
-    mayor = num2;
-  } else {
-    mayor = num3;
-  }
+  // Llamar a la función que encuentra el mayor pasando un array
+  const numeros = [num1, num2, num3];
+  const mayor = encontrarMayor(numeros);
 
   // Mostrar el resultado
   document.getElementById("respuesta").innerText = `El mayor es: ${mayor}`;
 }
+
+function encontrarMayor(array) {
+  let mayor = array[0];
+  for (let i = 1; i < array.length; i++) {
+      if (array[i] > mayor) {
+          mayor = array[i];
+      }
+  }
+  return mayor;
+}
+
+

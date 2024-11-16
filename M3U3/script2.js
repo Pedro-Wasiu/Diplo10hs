@@ -20,6 +20,7 @@ function boton() {
 
 function encontrarMayor(array) {
   let mayor = array[0];
+  // asumimos que el primer elemento del array es el mayor
   for (let i = 1; i < array.length; i++) {
       if (array[i] > mayor) {
           mayor = array[i];

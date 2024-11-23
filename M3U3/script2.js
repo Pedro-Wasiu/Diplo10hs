@@ -29,4 +29,6 @@ function encontrarMayor(array) {
   return mayor;
 }
 
+//i++ = Es equivalente a i = i + 1;.
+
 

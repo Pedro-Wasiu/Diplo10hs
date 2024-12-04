@@ -1,0 +1,1 @@
+En esta carpeta componente va todo lo que lleve js

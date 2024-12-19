@@ -11,23 +11,26 @@ import NovedadesPage from "./pages/NovedadesPage";
 
 function App() {
     return (
-        <div className="App">
+        <div id="root">
             <Header />
 
             <BrowserRouter>
                 <Nav />
-                <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="nosotros" element={<NosotrosPage />} />
-                    <Route path="novedades" element={<NovedadesPage />} />
-                    <Route path="contacto" element={<ContactoPage />} />
-                </Routes>
+                <main>
+                    <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="nosotros" element={<NosotrosPage />} />
+                        <Route path="novedades" element={<NovedadesPage />} />
+                        <Route path="contacto" element={<ContactoPage />} />
+                    </Routes>
+                </main>
             </BrowserRouter>
 
             <Footer />
-           
         </div>
     );
 }
 
 export default App;
+
+

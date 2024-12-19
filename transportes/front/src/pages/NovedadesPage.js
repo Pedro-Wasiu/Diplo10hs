@@ -1,3 +1,5 @@
+import '../style/Components/pages/NovedadesPage.css';
+
 const Novedades = (props) => {
     return (
         <section className="holder">

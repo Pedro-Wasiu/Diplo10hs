@@ -1,3 +1,5 @@
+import '../style/Components/pages/NosotrosPage.css';
+
 const NosotrosPage = (props) => {
     return (
       <main className="holder">

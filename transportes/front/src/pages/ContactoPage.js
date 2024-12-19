@@ -1,3 +1,5 @@
+import '../style/Components/pages/ContactoPage.css';
+
 import React from 'react';
 
 const ContactoPage = () => {

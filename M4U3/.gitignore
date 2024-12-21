@@ -1,0 +1,9 @@
+# Ignorar la carpeta node_modules
+node_modules/
+
+# Ignorar archivos temporales del sistema
+*.log
+*.tmp
+
+# Ignorar directorios o archivos específicos
+.env

@@ -26,10 +26,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+
+
 // select
 pool.query('select * from empleados').then(function (resultados) {
   console.log(resultados)
 });
+
+
+
+
+
 
 
 // catch 404 and forward to error handler

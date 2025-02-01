@@ -11,7 +11,7 @@ router.get('/', async function (req, res, next) {
         res.render('admin/novedades', {
             layout: 'admin/layout',
             usuario: req.session.nombre,
-            novedades
+            novedades: novedades
         });
     } catch (error) {
         console.log('Error fetching novedades:', error);
@@ -53,6 +53,59 @@ router.post('/agregar', async (req, res, next) => {
     }
 }); // Cierro post
 
+// Eliminar una novedad
+router.get('/eliminar/:id', async (req, res, next) => {
+    try {
+        var id = req.params.id;
+        console.log(`Deleting novedad with ID: ${id}`);
+        await novedadesModel.deleteNovedadesById(id);
+        console.log(`Novedad with ID ${id} deleted successfully`);
+        res.redirect('/admin/novedades');
+    } catch (error) {
+        console.log(`Error deleting novedad with ID ${id}:`, error);
+        next(error);
+    }
+});
+// cierre get eliminar
 
+// Obtener una novedad para modificar
+router.get('/modificar/:id', async (req, res, next) => {
+    try {
+        var id = req.params.id;
+        console.log(`Fetching novedad with ID: ${id}`);
+        var novedad = await novedadesModel.getNovedadesById(id);
+        console.log(`Fetched novedad: ${JSON.stringify(novedad)}`);
+        res.render('admin/modificar', {
+            layout: 'admin/layout',
+            novedad
+        });
+    } catch (error) {
+        console.log(`Error fetching novedad with ID ${id}:`, error);
+        next(error);
+    }
+});
+
+// Modificar la novedad
+router.post('/modificar', async (req, res, next) => {
+    try {
+        var obj = {
+            titulo: req.body.titulo,
+            subtitulo: req.body.subtitulo,
+            cuerpo: req.body.cuerpo
+        };
+        console.log("Obj modif:", obj);
+        console.log("modifica novedad con ID:", req.body.id);
+        await novedadesModel.modificarNovedadById(obj, req.body.id);
+        console.log('Novedad modificada');
+        res.redirect('/admin/novedades');
+    } catch (error) {
+        console.log("Error en la novedad", error);
+        res.render('admin/modificar', {
+            layout: 'admin/layout',
+            error: true,
+            message: 'No se modificó la novedad'
+        });
+    }
+});
 
 module.exports = router;

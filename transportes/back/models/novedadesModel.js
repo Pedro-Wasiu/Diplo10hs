@@ -18,11 +18,44 @@ async function insertNovedades(obj) {
     }
 }
 
+// Test the getNovedades function
+(async () => {
+    try {
+        console.log("Testing getNovedades function:");
+        const novedades = await getNovedades();
+        console.log(novedades);
+    } catch (error) {
+        console.error('Error connecting to novedades table:', error);
+    }
+})();
 
+async function deleteNovedadesById(id) {
+    var query = "DELETE FROM novedades WHERE id = ?";
+    var [rows, fields] = await pool.query(query, [id]);
+    return rows;
+}
 
+async function getNovedadesById(id) {
+    var query = 'SELECT * FROM novedades WHERE id = ?'; // Corrected query
+    var [rows, fields] = await pool.query(query, [id]);
+    return rows[0];
+}
 
+// Para modificar el update de los datos
+async function modificarNovedadById(obj, id) {
+    try {
+        var query = 'UPDATE novedades SET ? WHERE id = ?';
+        var [rows, fields] = await pool.query(query, [obj, id]);
+        return rows;
+    } catch (error) {
+        throw error;
+    }
+}
 
 module.exports = {
     getNovedades,
     insertNovedades,
+    deleteNovedadesById,
+    getNovedadesById,
+    modificarNovedadById
 };

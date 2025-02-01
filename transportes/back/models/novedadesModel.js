@@ -1,20 +1,28 @@
+
 var pool = require('./bd');
 
 async function getNovedades() {
     var query = 'SELECT * FROM novedades';
-    var rows = await pool.query(query);
+    var [rows, fields] = await pool.query(query);
     return rows;
 }
 
-async function insertNovedad(obj) {
+async function insertNovedades(obj) {
     try {
-        var query = "insert into novedades set ?";
-        var rows = await pool.query(query, [obj]);
+        var query = "INSERT INTO novedades SET ?";
+        var [rows, fields] = await pool.query(query, [obj]);
         return rows;
     } catch (error) {
         console.log(error);
         throw error;
-    } 
-} // cierra insert
+    }
+}
 
-module.exports = { getNovedades, insertNovedad };
+
+
+
+
+module.exports = {
+    getNovedades,
+    insertNovedades,
+};

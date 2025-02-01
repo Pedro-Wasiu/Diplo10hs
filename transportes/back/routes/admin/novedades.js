@@ -1,30 +1,42 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 var novedadesModel = require('../../models/novedadesModel');
 
-// para listar las novedades
+// Listar novedades
 router.get('/', async function (req, res, next) {
-    var novedades = await novedadesModel.getNovedades();
+    try {
+        console.log('Fetching all novedades');
+        var novedades = await novedadesModel.getNovedades();
+        console.log('Fetched novedades:', novedades);
+        res.render('admin/novedades', {
+            layout: 'admin/layout',
+            usuario: req.session.nombre,
+            novedades
+        });
+    } catch (error) {
+        console.log('Error fetching novedades:', error);
+        next(error);
+    }
+}); // Cierro get
 
-    res.render('admin/novedades', {
-        layout: 'admin/layout',
-        usuario: req.session.nombre,
-        novedades
-    });
-});
-
+// Render agregar form
 router.get('/agregar', (req, res, next) => {
-    res.render('admin/agregar', { // agregar.hbs
+    console.log('Rendering agregar form');
+    res.render('admin/agregar', {
         layout: 'admin/layout'
-    });
-}); // cierra Get
+    }); // Cierro render
+}); // Cierro get
 
+// Agregar nueva novedad
 router.post('/agregar', async (req, res, next) => {
     try {
-        if (req.body.titulo != "" && req.body.subtitulo != "" && req.body.cuerpo != "") {
-            await novedadesModel.insertNovedad(req.body);
+        console.log('Adding new novedad:', req.body);
+        if (req.body.titulo !== "" && req.body.subtitulo !== "" && req.body.cuerpo !== "") {
+            await novedadesModel.insertNovedades(req.body);
+            console.log('Novedad added successfully');
             res.redirect('/admin/novedades');
         } else {
+            console.log('All fields are required');
             res.render('admin/agregar', {
                 layout: 'admin/layout',
                 error: true,
@@ -32,14 +44,14 @@ router.post('/agregar', async (req, res, next) => {
             });
         }
     } catch (error) {
-        console.log(error);
+        console.log('Error adding novedad:', error);
         res.render('admin/agregar', {
             layout: 'admin/layout',
             error: true,
             message: 'No se cargó la novedad'
         });
     }
-});
+}); // Cierro post
 
 
 

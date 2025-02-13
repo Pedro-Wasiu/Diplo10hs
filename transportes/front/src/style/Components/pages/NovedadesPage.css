@@ -1,0 +1,49 @@
+/* ----- Contenedor raíz de la página de novedades ----- */
+.novedades-page {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Fondo borroso específico de la página de novedades */
+  .novedades-bg-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("/public/images/fondoleñador8.png") center center / cover no-repeat;
+    filter: blur(10px);
+    z-index: -1;
+  }
+  
+  /* Contenedor principal con estilo semitransparente */
+  .novedades-holder {
+    position: relative;
+    width: 80%;
+    max-width: 1000px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.575);
+    backdrop-filter: blur(6px);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    color: #fff;
+  }
+  
+  /* Estilos del título */
+  .novedades-holder h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+  }
+  
+  /* Ejemplo para el texto de carga */
+  .novedades-holder p {
+    color: #eee;
+    font-size: 16px;
+  }
+  

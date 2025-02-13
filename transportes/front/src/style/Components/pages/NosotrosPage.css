@@ -1,45 +1,82 @@
-.historia p {
-    font-size: 12px;
-}
-
-.personas {
-    display: flex;
-    justify-content: space-between;
-}
-
-.persona {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 18%;
+#bosque {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/public/images/fondoleñador8.png"); /* Asegúrate de que la imagen esté en public/images/ */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    filter: blur(10px);
+  }
+  
+/* Contenedor principal para el contenido de la sección de equipo */
+.equipo-content {
+    width: 80%;
+    max-width: 1000px;
+    margin: 50px auto;
+    /* Espacio alrededor y centrado */
+    /* Si deseas un fondo oscuro detrás, descomenta la siguiente línea:
+       background-color: rgba(0, 0, 0, 0.822);
+    */
+    border-radius: 10px;
+  }
+  
+  /* Título de la sección (Integrantes) */
+  .equipo-content > h1#C {
+    background-color: #252525;
     text-align: center;
-    padding: 1.5%;
-    box-sizing: border-box;
-}
-
-.persona img {
-    border-radius: 50%;
-    max-width: 80%;
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
-}
-
-.persona h5,
-.persona p {
     margin: 0;
+    padding: 10px;
+    color: #fff;
+    font-family: inherit;
+    font-size: inherit;
     font-weight: normal;
-    color: #2e64a1;
-}
-
-.persona h5 {
-    font-size: 14px;
-    margin-top: 5px;
-}
-
-.persona em {
-    font-size: 11px;
-    font-style: italic;
-}
-
-.persona p {
-    color: #666;
-    font-size: 10px;
-}
+  }
+  
+  /* Contenedor de la lista de integrantes en vertical */
+  .integrantes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio vertical entre cada integrante */
+    margin-top: 20px;
+  }
+  
+  /* Cada integrante en una fila horizontal */
+  .integrante {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #ffffff;    /* Fondo blanco para la tarjeta */
+    padding: 3px;
+    margin: 0 20px;
+    border-radius: 200px 0 0 200px;
+    border: 3px solid #242424;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.75);
+  }
+  
+  /* Imagen circular */
+  .integrante img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.69);
+  }
+  
+  /* Texto de cada integrante */
+  .integrante p {
+    padding: 10px;
+    margin: 0 30px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #000;  /* Texto en negro */
+  }
+  
+  /* Si quieres resaltar el nombre con un color distinto */
+  .integrante p strong {
+    color: #000;
+  }
+  

@@ -1,39 +1,65 @@
 import '../style/Components/pages/NosotrosPage.css';
 
-const NosotrosPage = (props) => {
-    return (
-      <main className="holder">
-        <div className="historia">
-          <h2>Historia</h2>
-          <p>Hace varios años, Wasiu Clothing nació de una visión simple pero poderosa: crear ropa que reflejara autenticidad, durabilidad y un estilo de vida cercano a la naturaleza. Todo comenzó con Pedro, un joven emprendedor apasionado por el diseño y la vida al aire libre. Pedro había crecido en una familia donde el trabajo manual y el respeto por los materiales naturales eran parte del día a día. Desde pequeño, veía a su padre y a su abuelo trabajar con sus manos, ya fuera construyendo muebles de madera o reparando herramientas que parecían resistir al paso del tiempo.
+import React from "react";
 
-El estilo de vida rústico y sencillo de su familia marcó profundamente a Pedro. Mientras estudiaba diseño de modas, se dio cuenta de que quería crear algo que combinara esos valores tradicionales con su pasión por la ropa. La moda de hoy parecía estar dominada por la producción rápida y tendencias pasajeras, y eso no resonaba con él. Quería diseñar prendas que perduraran, tanto en estilo como en calidad, inspiradas en el estilo de vida leñador: fuerte, funcional y sin pretensiones.
+const EquipoPage = () => {
+  return (
+    <div className="equipo-page">
+      {/* Fondo (si lo deseas, este elemento puede estar en otro lugar o en el layout general) */}
+      <div id="bosque"></div>
+      <main>
+        <h1 id="C">Integrantes</h1>
 
-En una conversación casual con amigos durante una caminata por los bosques cercanos, Pedro tuvo la idea de crear una marca de ropa inspirada en ese estilo de vida: ropa que fuera tanto funcional como estilísticamente atractiva, pero con un enfoque en la calidad y durabilidad. Así nació Wasiu Clothing.
+        <div className="integrantes">
+          <div className="integrante">
+            <img src="/images/nosotros1.jpg" alt="Pedro" />
+            <p>
+              <strong>Pedro - Fundador y Director Creativo</strong>
+              <br />
+              Pedro, un amante de la vida al aire libre y de las tradiciones del trabajo de leñador, fundó la marca hace diez años. Inspirado por sus raíces y por la naturaleza, él mismo diseña cada colección con materiales sostenibles y resistentes, ideales para el estilo de vida rústico y aventurero. Su visión es hacer ropa que combine comodidad, estilo y la esencia del trabajo en la naturaleza. Pedro está convencido de que "una buena prenda debe contar una historia".
+            </p>
+          </div>
 
-Desde el principio, el objetivo fue claro: ofrecer ropa que no solo se viera bien, sino que también fuera práctica y duradera. Camisas de franela gruesa, abrigos resistentes, botas y chaquetas de cuero que pudieran soportar las condiciones más duras, pero con un diseño cuidado que también pudiera ser usado en la ciudad. Pedro buscó trabajar con pequeños talleres locales y proveedores que compartieran su enfoque en la calidad y el respeto por los materiales naturales.
+          <div className="integrante">
+            <img src="/images/nosotros2.jpg" alt="Laura" />
+            <p>
+              <strong>Laura - Jefa de Diseño Textil</strong>
+              <br />
+              Laura es la encargada de llevar las ideas de Pedro a la realidad. Con un profundo conocimiento en diseño de telas y técnicas de tejido, se asegura de que cada prenda sea duradera y mantenga la autenticidad del estilo leñador. Le apasiona trabajar con materiales naturales, como lana y algodón orgánico, y siempre está buscando maneras innovadoras de incorporar patrones y texturas inspirados en los bosques. Laura cree firmemente en la moda responsable y en crear prendas que perduren.
+            </p>
+          </div>
 
-El lanzamiento de la primera colección fue un hito. Inspirada en los tonos y texturas del bosque, cada prenda de Wasiu Clothing evocaba una conexión con lo rústico y lo natural. Los consumidores no tardaron en notar la diferencia: no era solo ropa de estilo leñador, era ropa hecha para durar, con detalles cuidadosamente diseñados que mezclaban lo tradicional con lo moderno.
+          <div className="integrante">
+            <img src="/images/nosotros3.jpg" alt="Miguel" />
+            <p>
+              <strong>Miguel - Experto en Sostenibilidad y Responsable de Calidad</strong>
+              <br />
+              Miguel es el especialista en sostenibilidad de la marca. Su trabajo es asegurar que cada proceso de producción sea lo más ecológico y ético posible. Desde la elección de proveedores hasta la inspección de la calidad de cada pieza, Miguel se asegura de que cada prenda respete el medio ambiente y los principios de sostenibilidad. Para él, la ropa de leñador debe tener una huella mínima en el planeta, y su lema es "Respetar la tierra que nos da tanto".
+            </p>
+          </div>
 
-Hoy en día, Wasiu Clothing se ha convertido en un referente para aquellos que buscan prendas duraderas, funcionales y llenas de carácter. La filosofía de la marca sigue siendo la misma que en sus inicios: ropa de calidad, hecha con integridad, para aquellos que valoran tanto el estilo como la funcionalidad.
+          <div className="integrante">
+            <img src="/images/nosotros4.jpg" alt="Sofía" />
+            <p>
+              <strong>Sofía - Gerente de Marketing y Redes Sociales</strong>
+              <br />
+              Sofía es la voz y la imagen de la marca. Es quien da vida a cada historia y se encarga de conectar con la audiencia a través de redes sociales y campañas publicitarias. Apasionada por el estilo de vida outdoor, comparte consejos y aventuras que inspiran a los seguidores de la marca a reconectar con la naturaleza. Sofía también organiza eventos y colaboraciones con influencers para promocionar los productos de la marca. "No vendemos ropa, vendemos una experiencia", dice Sofía.
+            </p>
+          </div>
 
-Cada prenda que sale de nuestros talleres lleva consigo una parte de nuestra historia y de nuestra visión. Porque para nosotros, no se trata solo de moda; se trata de crear ropa que acompañe a quienes viven la vida con pasión y respeto por lo que los rodea, tal como lo hizo Pedro al fundar Wasiu Clothing.</p>
-        
-        </div>
-        <div className="staff">
-          <h2>Staff</h2>
-          <div className="personas">
-            <div className="persona">
-              <img src="images/nosotros1.jpg" alt="Juan Gomez" />
-              <h5>Pedro</h5>
-              <h6>Fundador y Director Creativo</h6>
-              <p>Pedro, un amante de la vida al aire libre y de las tradiciones del trabajo de leñador, fundó la marca hace diez años. Inspirado por sus raíces y por la naturaleza, él mismo diseña cada colección con materiales sostenibles y resistentes, ideales para el estilo de vida rústico y aventurero. Su visión es hacer ropa que combine comodidad, estilo, y la esencia del trabajo en la naturaleza. Pedro está convencido de que "una buena prenda debe contar una historia".</p>
-            </div>
+          <div className="integrante">
+            <img src="/images/nosotros5.jpg" alt="Tomás" />
+            <p>
+              <strong>Tomás - Fotógrafo y Videógrafo</strong>
+              <br />
+              Tomás es el encargado de capturar la esencia de la marca en cada imagen y video. Su objetivo es transmitir la autenticidad y el espíritu aventurero que define a la ropa de leñador. Para Tomás, cada prenda es una historia visual, y sus sesiones de fotos suelen llevarse a cabo en lugares remotos y naturales. Su trabajo le da a la marca una estética poderosa, conectando visualmente con clientes que buscan más que solo ropa: buscan un estilo de vida.
+            </p>
           </div>
         </div>
       </main>
-    );
-  }
-  
-  export default NosotrosPage;
-  
+
+    </div>
+  );
+};
+
+export default EquipoPage;

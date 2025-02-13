@@ -1,10 +1,10 @@
-import '../../style/Components/layout/Footer.css';
 import React from 'react';
+import '../../style/Components/layout/Footer.css';
 
-const Footer = (props) => {
+const Footer = () => {
     return (
         <footer>
-            <p>Diseñado por Pedro Wasiuniec</p>
+            <p>© 2025 Mi Sitio Web</p>
         </footer>
     );
 };

@@ -25,8 +25,8 @@ const NovedadesPage = (props) => {
       
       {/* Contenedor principal de novedades */}
       <div className="novedades-holder">
-        <h2>Novedades</h2>
-        {loading ? (
+      <h1 className="tit">NOVEDADES</h1>
+      {loading ? (
           <p>Cargando...</p>
         ) : (
           novedades.map(item => (

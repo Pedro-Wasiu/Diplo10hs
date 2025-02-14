@@ -1,158 +1,161 @@
 /* ======= Fondo borroso ======= */
 .contact-container {
-    position: relative;
-    min-height: 100vh; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Arial', sans-serif;
-    overflow: hidden; /* Oculta scroll si lo deseas */
-  }
-  
-  /* Capa fija con fondo borroso */
-  .bg-blur {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("/public/images/fondoleñador8.png"); /* Asegúrate de que la imagen esté en public/images/ */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
-    filter: blur(10px);
-  }
-  
-  /* ======= Caja principal ======= */
-  .contact-box {
-    position: relative;
-    width: 80%;
-    max-width: 1000px;
-    display: flex;
-    flex-wrap: wrap; /* Para que en pantallas pequeñas se apilen */
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(6px); 
-    border-radius: 10px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    gap: 20px; /* Espacio entre columnas */
-  }
-  
-  /* ======= Columna del formulario ======= */
-  .form-side {
-    flex: 1;
-    min-width: 300px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    padding: 20px;
-  }
-  
-  /* Título principal en negro, sin sombra */
-  .form-side h2 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #000; /* Negro */
-    text-shadow: none; /* Sin sombra */
-  }
-  
-  /* Formularios */
-  .form-side form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Subtítulos en gris */
-  .form-side label {
-    margin-bottom: 5px;
-    color: #1a1a1a; /* Gris */
-    font-weight: bold;
-  }
-  
-  .form-side input,
-  .form-side textarea {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #aaa;
-    border-radius: 5px;
-    font-size: 16px;
-    outline: none;
-  }
-  
-  .form-side input:focus,
-  .form-side textarea:focus {
-    border-color: #666;
-  }
-  
-  /* Botón de Enviar: color diferente */
-  .form-side button {
-    padding: 10px;
-    background-color: #0066ff; /* Naranja */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .form-side button:hover {
-    background-color: #d35400; /* Naranja más oscuro */
-  }
-  
-  /* Mensajes de estado */
-  .form-side p {
-    margin: 10px 0;
-    color: #fff;
-    text-shadow: 1px 1px 2px #000;
-  }
-  
-  /* ======= Columna de redes sociales ======= */
-  .social-side {
-    flex: 1;
-    min-width: 300px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    padding: 20px;
-  }
-  
-  /* Título principal en negro, sin sombra */
-  .social-side h2 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #000; /* Negro */
-    text-shadow: none; /* Sin sombra */
-  }
-  
-  /* Lista de redes sociales */
-  .social-side ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  /* Subtítulos en gris */
-  .social-side ul li {
-    margin-bottom: 15px;
-    color: #272727; /* Gris */
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .social-side ul li i {
-    margin-right: 8px;
-    font-size: 18px;
-    color: #fff; /* Ícono blanco sobre fondo gris */
-  }
-  
-  /* Ícono circular (si lo usas) */
-  .icon {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 8px;
-  }
-  
+  position: relative;
+  min-height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden; /* Oculta scroll si lo deseas */
+}
+
+/* Capa fija con fondo borroso */
+.bg-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/public/images/fondoleñador8.png"); /* Asegúrate de que la imagen esté en public/images/ */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  filter: blur(10px);
+}
+
+/* ======= Caja principal ======= */
+.contact-box {
+  position: relative;
+  width: 80%;
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap; /* Para que en pantallas pequeñas se apilen */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px); 
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  gap: 20px; /* Espacio entre columnas */
+}
+
+/* ======= Columna del formulario ======= */
+.form-side {
+  flex: 1;
+  min-width: 300px;
+  background: rgba(255, 255, 255, 0.61);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left; /* Asegura que el contenido no esté centrado */
+}
+
+/* Título principal centrado */
+.form-side h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #000; /* Negro */
+  text-shadow: none; /* Sin sombra */
+}
+
+/* Formularios */
+.form-side form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Estilos de los campos */
+.form-side input,
+.form-side textarea {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.form-side input:focus,
+.form-side textarea:focus {
+  border-color: #666;
+}
+
+/* Botón de Enviar */
+.form-side button {
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  background-color: #0066ff; 
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px; /* Centra horizontalmente */
+}
+
+.form-side button:hover {
+  background-color: #0044cc; 
+}
+/* Mensajes de estado */
+.form-side p {
+  margin: 10px 0;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* ======= Columna de redes sociales ======= */
+.social-side {
+  flex: 1;
+  min-width: 300px;
+  background: rgba(255, 255, 255, 0.61);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left; /* Asegura que el contenido no esté centrado */
+}
+
+/* Título principal centrado */
+.social-side h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #000; /* Negro */
+  text-shadow: none; /* Sin sombra */
+}
+
+/* Lista de redes sociales */
+.social-side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilos de los elementos de la lista */
+.social-side ul li {
+  margin-bottom: 15px;
+  color: #272727; /* Gris */
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+/* Íconos */
+.social-side ul li i {
+  margin-right: 8px;
+  font-size: 18px;
+  color: #000; /* Negro */
+}
+
+/* Ícono circular */
+.icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 8px;
+}

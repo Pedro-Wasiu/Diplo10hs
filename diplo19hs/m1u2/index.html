@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="diseño.css">
+</head>
+<body>
+    <div id="Contenedor">
+        <h1>
+            Calculadora
+        </h1>
+        <input type="text" id="pantalla" readonly>
+        <ul>
+            <li>
+                <button type="button" onclick="agregarNumero('7')">7</button>
+            </li>
+            <li>
+                <button type="button" onclick="agregarNumero('8')">8</button>
+            </li>
+            <li>
+                <button type="button" onclick="agregarNumero('9')">9</button>
+            </li>
+            <li>
+                <button type="button" onclick="multiplicar()">x</button>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <button type="button" onclick="agregarNumero('4')">4</button>
+            </li>
+            <li>
+                <button type="button" onclick="agregarNumero('5')">5</button>
+            </li>
+            <li>
+                <button type="button" onclick="agregarNumero('6')">6</button>
+            </li>
+            <li>
+                <button type="button" onclick="restar()">-</button>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <button type="button" onclick="agregarNumero('1')">1</button>
+            </li>
+            <li>
+                <button type="button" onclick="agregarNumero('2')">2</button>
+            </li>
+            <li>
+                <button type="button" onclick="agregarNumero('3')">3</button>
+            </li>
+            <li>
+                <button type="button" onclick="sumar()">+</button>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <button type="button" onclick="borrar()">←</button>
+            </li>
+            <li>
+                <button type="button" onclick="agregarNumero('0')">0</button>
+            </li>
+            <li>
+                <button type="button" onclick="reset('')">C</button>
+            </li>
+            <li>
+                <button type="button" onclick="calcular()">=</button>
+            </li>
+        </ul>
+    </div>
+</body>
+<script src="funcion.js"></script>
+</html>
